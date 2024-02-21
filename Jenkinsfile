@@ -29,14 +29,14 @@ pipeline{
             steps{
                 
                 sh 'terraform apply -auto-approve'
-        stage ('remove')
-            setps {
+
+            
+            }
+        }
+        stage('remove'){
+            steps {
 
                 sh 'terraform destroy -auto-approve'
-                    
-                
-                }
-            
             }
         }
     }
